@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6249ebce10d07d6cff2e8aeb049ac425 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6249ebce10d07d6cff2e8aeb049ac425" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6249ebce10d07d6cff2e8aeb049ac425 = L.map(
+                "map_6249ebce10d07d6cff2e8aeb049ac425",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fe4ba6af6f50372700adf20a88fa8051 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_fe4ba6af6f50372700adf20a88fa8051.addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var marker_c922012fb1bd794f0a2ddccfd35f9bdd = L.marker(
+                [40.7831, -73.9712],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_215caef51f49a5886573276fafd93c46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c922012fb1bd794f0a2ddccfd35f9bdd.setIcon(icon_215caef51f49a5886573276fafd93c46);
+        
+    
+        var popup_f64d30d0608ad8f617ae9bac30f4d2ad = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6ccf156e734b657bcf5354a0dca88c4e = $(`<div id="html_6ccf156e734b657bcf5354a0dca88c4e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>2-Bedroom in Manhattan</h4>                     <p><strong>Price:</strong> $3,466.34</p>                     <p><strong>Size:</strong> 1118 sq ft</p>                     <p><strong>Features:</strong> Balcony, High-Speed Internet, Hardwood Floors</p>                     <p><strong>Available:</strong> May 2024</p>                 </div>                 </div>`)[0];
+                popup_f64d30d0608ad8f617ae9bac30f4d2ad.setContent(html_6ccf156e734b657bcf5354a0dca88c4e);
+            
+        
+
+        marker_c922012fb1bd794f0a2ddccfd35f9bdd.bindPopup(popup_f64d30d0608ad8f617ae9bac30f4d2ad)
+        ;
+
+        
+    
+    
+            var marker_7fd45e371adb9b9f65f577f07c030378 = L.marker(
+                [40.7831, -73.9712],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_f873f121b0b091df0241ccd1a0768c19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7fd45e371adb9b9f65f577f07c030378.setIcon(icon_f873f121b0b091df0241ccd1a0768c19);
+        
+    
+        var popup_a922ab172652b3631e1a5a8794bbc7d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ed0f9e7046a08548ad7f429fa52e085c = $(`<div id="html_ed0f9e7046a08548ad7f429fa52e085c" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Manhattan</h4>                     <p><strong>Price:</strong> $1,816.15</p>                     <p><strong>Size:</strong> 383 sq ft</p>                     <p><strong>Features:</strong> Dishwasher, Hardwood Floors, Walk-in Closet</p>                     <p><strong>Available:</strong> April 2024</p>                 </div>                 </div>`)[0];
+                popup_a922ab172652b3631e1a5a8794bbc7d2.setContent(html_ed0f9e7046a08548ad7f429fa52e085c);
+            
+        
+
+        marker_7fd45e371adb9b9f65f577f07c030378.bindPopup(popup_a922ab172652b3631e1a5a8794bbc7d2)
+        ;
+
+        
+    
+    
+            var marker_d558e6db7ef4f099a96e8ffbdd3e5dde = L.marker(
+                [40.6782, -73.9442],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_cf015a8ba1e03498e73cad02c258e3f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d558e6db7ef4f099a96e8ffbdd3e5dde.setIcon(icon_cf015a8ba1e03498e73cad02c258e3f1);
+        
+    
+        var popup_1e47189e704a6338fa1a09671fef3c64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6b5cf311c44efeb02a3a3d80fc32368 = $(`<div id="html_f6b5cf311c44efeb02a3a3d80fc32368" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Brooklyn</h4>                     <p><strong>Price:</strong> $1,780.28</p>                     <p><strong>Size:</strong> 430 sq ft</p>                     <p><strong>Features:</strong> Pet Friendly, Walk-in Closet, Cable TV</p>                     <p><strong>Available:</strong> November 2024</p>                 </div>                 </div>`)[0];
+                popup_1e47189e704a6338fa1a09671fef3c64.setContent(html_f6b5cf311c44efeb02a3a3d80fc32368);
+            
+        
+
+        marker_d558e6db7ef4f099a96e8ffbdd3e5dde.bindPopup(popup_1e47189e704a6338fa1a09671fef3c64)
+        ;
+
+        
+    
+    
+            var marker_cce0c1392a9d43d57be9808ca7139e0f = L.marker(
+                [40.7282, -73.7949],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_999a7d1665e4393f290522876f2acdb9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cce0c1392a9d43d57be9808ca7139e0f.setIcon(icon_999a7d1665e4393f290522876f2acdb9);
+        
+    
+        var popup_73cd1812425758b911a2d317f2be391c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5a62614be8108f607d511671783414a = $(`<div id="html_b5a62614be8108f607d511671783414a" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>2-Bedroom in Queens</h4>                     <p><strong>Price:</strong> $2,911.01</p>                     <p><strong>Size:</strong> 1176 sq ft</p>                     <p><strong>Features:</strong> Pool, High-Speed Internet, Furnished</p>                     <p><strong>Available:</strong> September 2024</p>                 </div>                 </div>`)[0];
+                popup_73cd1812425758b911a2d317f2be391c.setContent(html_b5a62614be8108f607d511671783414a);
+            
+        
+
+        marker_cce0c1392a9d43d57be9808ca7139e0f.bindPopup(popup_73cd1812425758b911a2d317f2be391c)
+        ;
+
+        
+    
+    
+            var marker_02257f1c3a8f128a7d616793cb7ef4ea = L.marker(
+                [40.8448, -73.8648],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_60f3c1d231fbb989eee4c90498428aff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_02257f1c3a8f128a7d616793cb7ef4ea.setIcon(icon_60f3c1d231fbb989eee4c90498428aff);
+        
+    
+        var popup_f1a270c395cc934ef15f83cb07f5f218 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34111be382ad2e6c1bc9105085923388 = $(`<div id="html_34111be382ad2e6c1bc9105085923388" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>1-Bedroom in Bronx</h4>                     <p><strong>Price:</strong> $2,509.88</p>                     <p><strong>Size:</strong> 704 sq ft</p>                     <p><strong>Features:</strong> Furnished, Parking, Air Conditioning</p>                     <p><strong>Available:</strong> August 2024</p>                 </div>                 </div>`)[0];
+                popup_f1a270c395cc934ef15f83cb07f5f218.setContent(html_34111be382ad2e6c1bc9105085923388);
+            
+        
+
+        marker_02257f1c3a8f128a7d616793cb7ef4ea.bindPopup(popup_f1a270c395cc934ef15f83cb07f5f218)
+        ;
+
+        
+    
+    
+            var marker_def8cf45f4f8406c1ae1f8abbb9af37b = L.marker(
+                [34.0928, -118.3287],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_256b36293c0f34b898c0e1aabdc576fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_def8cf45f4f8406c1ae1f8abbb9af37b.setIcon(icon_256b36293c0f34b898c0e1aabdc576fc);
+        
+    
+        var popup_ef6a14965e97734280b1c968d56c58df = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f27faa54455a3e1b853056905862551a = $(`<div id="html_f27faa54455a3e1b853056905862551a" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Hollywood</h4>                     <p><strong>Price:</strong> $1,869.55</p>                     <p><strong>Size:</strong> 418 sq ft</p>                     <p><strong>Features:</strong> Washer/Dryer, Parking, Cable TV</p>                     <p><strong>Available:</strong> November 2024</p>                 </div>                 </div>`)[0];
+                popup_ef6a14965e97734280b1c968d56c58df.setContent(html_f27faa54455a3e1b853056905862551a);
+            
+        
+
+        marker_def8cf45f4f8406c1ae1f8abbb9af37b.bindPopup(popup_ef6a14965e97734280b1c968d56c58df)
+        ;
+
+        
+    
+    
+            var marker_698420a39d3d24a762b3e62c5c5b3b4c = L.marker(
+                [34.0195, -118.4912],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_e1c0345ee3f7097bf7f727e9927ef297 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_698420a39d3d24a762b3e62c5c5b3b4c.setIcon(icon_e1c0345ee3f7097bf7f727e9927ef297);
+        
+    
+        var popup_5e2ce7fb804dd27d5edcbbbd55a70886 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0d3cf61314da29444465f63fa12d9727 = $(`<div id="html_0d3cf61314da29444465f63fa12d9727" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Santa Monica</h4>                     <p><strong>Price:</strong> $2,058.48</p>                     <p><strong>Size:</strong> 573 sq ft</p>                     <p><strong>Features:</strong> Furnished, Cable TV, Balcony</p>                     <p><strong>Available:</strong> February 2024</p>                 </div>                 </div>`)[0];
+                popup_5e2ce7fb804dd27d5edcbbbd55a70886.setContent(html_0d3cf61314da29444465f63fa12d9727);
+            
+        
+
+        marker_698420a39d3d24a762b3e62c5c5b3b4c.bindPopup(popup_5e2ce7fb804dd27d5edcbbbd55a70886)
+        ;
+
+        
+    
+    
+            var marker_56e69fb53668fb5f140afc4518d587ac = L.marker(
+                [34.0195, -118.4912],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_fe14827b38713a952e3bfb246686207a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_56e69fb53668fb5f140afc4518d587ac.setIcon(icon_fe14827b38713a952e3bfb246686207a);
+        
+    
+        var popup_3f0fa4a112d3cbaebb858c498ce2b661 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0a297682171db0d7a8970b6c6cfb0357 = $(`<div id="html_0a297682171db0d7a8970b6c6cfb0357" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Shared Room in Santa Monica</h4>                     <p><strong>Price:</strong> $938.76</p>                     <p><strong>Size:</strong> 224 sq ft</p>                     <p><strong>Features:</strong> Security System, Walk-in Closet, Washer/Dryer</p>                     <p><strong>Available:</strong> July 2024</p>                 </div>                 </div>`)[0];
+                popup_3f0fa4a112d3cbaebb858c498ce2b661.setContent(html_0a297682171db0d7a8970b6c6cfb0357);
+            
+        
+
+        marker_56e69fb53668fb5f140afc4518d587ac.bindPopup(popup_3f0fa4a112d3cbaebb858c498ce2b661)
+        ;
+
+        
+    
+    
+            var marker_f700a94ecbe3c098855b05f36ed0d2b5 = L.marker(
+                [34.0928, -118.3287],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_9407645c242980a995fc07c6e9334c9a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f700a94ecbe3c098855b05f36ed0d2b5.setIcon(icon_9407645c242980a995fc07c6e9334c9a);
+        
+    
+        var popup_f9b53406490f4f42c4701b28dbf3f813 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0e6bb05d27d313b3a9b46627fc027867 = $(`<div id="html_0e6bb05d27d313b3a9b46627fc027867" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>1-Bedroom in Hollywood</h4>                     <p><strong>Price:</strong> $2,409.03</p>                     <p><strong>Size:</strong> 689 sq ft</p>                     <p><strong>Features:</strong> Cable TV, Gym, Walk-in Closet</p>                     <p><strong>Available:</strong> November 2024</p>                 </div>                 </div>`)[0];
+                popup_f9b53406490f4f42c4701b28dbf3f813.setContent(html_0e6bb05d27d313b3a9b46627fc027867);
+            
+        
+
+        marker_f700a94ecbe3c098855b05f36ed0d2b5.bindPopup(popup_f9b53406490f4f42c4701b28dbf3f813)
+        ;
+
+        
+    
+    
+            var marker_5e6278c105306c91ba01e4f8b2c53f39 = L.marker(
+                [34.0928, -118.3287],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_7e01a848140b269feee979ed759d9159 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5e6278c105306c91ba01e4f8b2c53f39.setIcon(icon_7e01a848140b269feee979ed759d9159);
+        
+    
+        var popup_13f29ff2ec3ca610981ecd858a63c9ee = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd20806aa258fc932c79f957b27a0d20 = $(`<div id="html_bd20806aa258fc932c79f957b27a0d20" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>2-Bedroom in Hollywood</h4>                     <p><strong>Price:</strong> $2,666.44</p>                     <p><strong>Size:</strong> 962 sq ft</p>                     <p><strong>Features:</strong> Washer/Dryer, Hardwood Floors, Heating</p>                     <p><strong>Available:</strong> May 2024</p>                 </div>                 </div>`)[0];
+                popup_13f29ff2ec3ca610981ecd858a63c9ee.setContent(html_bd20806aa258fc932c79f957b27a0d20);
+            
+        
+
+        marker_5e6278c105306c91ba01e4f8b2c53f39.bindPopup(popup_13f29ff2ec3ca610981ecd858a63c9ee)
+        ;
+
+        
+    
+    
+            var marker_ba557cd0500b5fef6ee20f8c5535cdfe = L.marker(
+                [41.9214, -87.6513],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_8ade481f2f62a192882d291117ee0ec2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ba557cd0500b5fef6ee20f8c5535cdfe.setIcon(icon_8ade481f2f62a192882d291117ee0ec2);
+        
+    
+        var popup_343ebf1661e8e5df928bfb8b84bec20b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_df36d14acc84015af85399d380740d9e = $(`<div id="html_df36d14acc84015af85399d380740d9e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>2-Bedroom in Lincoln Park</h4>                     <p><strong>Price:</strong> $2,714.33</p>                     <p><strong>Size:</strong> 936 sq ft</p>                     <p><strong>Features:</strong> Heating, Parking, Cable TV</p>                     <p><strong>Available:</strong> October 2024</p>                 </div>                 </div>`)[0];
+                popup_343ebf1661e8e5df928bfb8b84bec20b.setContent(html_df36d14acc84015af85399d380740d9e);
+            
+        
+
+        marker_ba557cd0500b5fef6ee20f8c5535cdfe.bindPopup(popup_343ebf1661e8e5df928bfb8b84bec20b)
+        ;
+
+        
+    
+    
+            var marker_19440b3b788b74348af1ca27af41bf13 = L.marker(
+                [41.9442, -87.6544],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_6bde258d26c6ce9a810712a185310244 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_19440b3b788b74348af1ca27af41bf13.setIcon(icon_6bde258d26c6ce9a810712a185310244);
+        
+    
+        var popup_9edb73e4bd6e7e58a046bde59b2e2483 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_23267d2e047ab2ece5ca41bab98cb949 = $(`<div id="html_23267d2e047ab2ece5ca41bab98cb949" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Lake View</h4>                     <p><strong>Price:</strong> $1,212.34</p>                     <p><strong>Size:</strong> 357 sq ft</p>                     <p><strong>Features:</strong> Cable TV, Washer/Dryer, Balcony</p>                     <p><strong>Available:</strong> October 2024</p>                 </div>                 </div>`)[0];
+                popup_9edb73e4bd6e7e58a046bde59b2e2483.setContent(html_23267d2e047ab2ece5ca41bab98cb949);
+            
+        
+
+        marker_19440b3b788b74348af1ca27af41bf13.bindPopup(popup_9edb73e4bd6e7e58a046bde59b2e2483)
+        ;
+
+        
+    
+    
+            var marker_8243f02d213d570d732be4a02b1f9dba = L.marker(
+                [41.9214, -87.6513],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_8521152d5aeb25a52492f87845b0ced9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8243f02d213d570d732be4a02b1f9dba.setIcon(icon_8521152d5aeb25a52492f87845b0ced9);
+        
+    
+        var popup_e4eb6ebe94cd7b5538a9d27c5fbf812e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_26b70fdd768a09be5e6d5e0e2ecd9583 = $(`<div id="html_26b70fdd768a09be5e6d5e0e2ecd9583" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Shared Room in Lincoln Park</h4>                     <p><strong>Price:</strong> $950.82</p>                     <p><strong>Size:</strong> 294 sq ft</p>                     <p><strong>Features:</strong> Parking, Air Conditioning, Pet Friendly</p>                     <p><strong>Available:</strong> November 2024</p>                 </div>                 </div>`)[0];
+                popup_e4eb6ebe94cd7b5538a9d27c5fbf812e.setContent(html_26b70fdd768a09be5e6d5e0e2ecd9583);
+            
+        
+
+        marker_8243f02d213d570d732be4a02b1f9dba.bindPopup(popup_e4eb6ebe94cd7b5538a9d27c5fbf812e)
+        ;
+
+        
+    
+    
+            var marker_33d3a20b9e4b9e990132d101028a075c = L.marker(
+                [41.9214, -87.6513],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_6c250862410e2026e49c56c7364a6e3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_33d3a20b9e4b9e990132d101028a075c.setIcon(icon_6c250862410e2026e49c56c7364a6e3b);
+        
+    
+        var popup_91608d032372b7f89211728e89938799 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_59244548db639ebce4ae2a02696366d6 = $(`<div id="html_59244548db639ebce4ae2a02696366d6" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Lincoln Park</h4>                     <p><strong>Price:</strong> $1,333.29</p>                     <p><strong>Size:</strong> 483 sq ft</p>                     <p><strong>Features:</strong> Pet Friendly, Hardwood Floors, Dishwasher</p>                     <p><strong>Available:</strong> February 2024</p>                 </div>                 </div>`)[0];
+                popup_91608d032372b7f89211728e89938799.setContent(html_59244548db639ebce4ae2a02696366d6);
+            
+        
+
+        marker_33d3a20b9e4b9e990132d101028a075c.bindPopup(popup_91608d032372b7f89211728e89938799)
+        ;
+
+        
+    
+    
+            var marker_58c03d9fbbd839fd7ba84ff31102a2a5 = L.marker(
+                [41.8786, -87.6251],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_7c39a100cf65882a8c28b6e4d3f2329e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_58c03d9fbbd839fd7ba84ff31102a2a5.setIcon(icon_7c39a100cf65882a8c28b6e4d3f2329e);
+        
+    
+        var popup_a6c019189d89c2b6646b8ab3329c78de = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_576403cb618254ff4284aa3ae9485835 = $(`<div id="html_576403cb618254ff4284aa3ae9485835" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Shared Room in Loop</h4>                     <p><strong>Price:</strong> $891.24</p>                     <p><strong>Size:</strong> 244 sq ft</p>                     <p><strong>Features:</strong> Pet Friendly, High-Speed Internet, Parking</p>                     <p><strong>Available:</strong> January 2024</p>                 </div>                 </div>`)[0];
+                popup_a6c019189d89c2b6646b8ab3329c78de.setContent(html_576403cb618254ff4284aa3ae9485835);
+            
+        
+
+        marker_58c03d9fbbd839fd7ba84ff31102a2a5.bindPopup(popup_a6c019189d89c2b6646b8ab3329c78de)
+        ;
+
+        
+    
+    
+            var marker_ac94c2d1e2643dc5e9007224c87ec076 = L.marker(
+                [25.7215, -80.2684],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_fe4592a14fa94d593760c3f1f0dddec5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac94c2d1e2643dc5e9007224c87ec076.setIcon(icon_fe4592a14fa94d593760c3f1f0dddec5);
+        
+    
+        var popup_355b2235a498105f33190d5dc15ad180 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7ef959b4e20304ed70aeb10423c963b7 = $(`<div id="html_7ef959b4e20304ed70aeb10423c963b7" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>2-Bedroom in Coral Gables</h4>                     <p><strong>Price:</strong> $3,265.43</p>                     <p><strong>Size:</strong> 776 sq ft</p>                     <p><strong>Features:</strong> High-Speed Internet, Pet Friendly, Gym</p>                     <p><strong>Available:</strong> March 2024</p>                 </div>                 </div>`)[0];
+                popup_355b2235a498105f33190d5dc15ad180.setContent(html_7ef959b4e20304ed70aeb10423c963b7);
+            
+        
+
+        marker_ac94c2d1e2643dc5e9007224c87ec076.bindPopup(popup_355b2235a498105f33190d5dc15ad180)
+        ;
+
+        
+    
+    
+            var marker_7cb379d36dcb493dcdc4c23a24928475 = L.marker(
+                [25.8049, -80.1989],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_8260e94d4f9141423e368c08814929f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7cb379d36dcb493dcdc4c23a24928475.setIcon(icon_8260e94d4f9141423e368c08814929f6);
+        
+    
+        var popup_fbc4be883f614f4aeef68e2cdc55a77b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e28dc267382bb19cea550ffa7e7de78f = $(`<div id="html_e28dc267382bb19cea550ffa7e7de78f" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Shared Room in Wynwood</h4>                     <p><strong>Price:</strong> $1,026.01</p>                     <p><strong>Size:</strong> 227 sq ft</p>                     <p><strong>Features:</strong> Security System, Cable TV, Pet Friendly</p>                     <p><strong>Available:</strong> March 2024</p>                 </div>                 </div>`)[0];
+                popup_fbc4be883f614f4aeef68e2cdc55a77b.setContent(html_e28dc267382bb19cea550ffa7e7de78f);
+            
+        
+
+        marker_7cb379d36dcb493dcdc4c23a24928475.bindPopup(popup_fbc4be883f614f4aeef68e2cdc55a77b)
+        ;
+
+        
+    
+    
+            var marker_3231d317eea2d6d1f8e6253f8c004408 = L.marker(
+                [25.7827, -80.134],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_c7c78b9580c3970706b4b223a311c318 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3231d317eea2d6d1f8e6253f8c004408.setIcon(icon_c7c78b9580c3970706b4b223a311c318);
+        
+    
+        var popup_ea4f08cf3be94af67eb0abdfb972addd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_216e0145339683f55e0419fa6618820d = $(`<div id="html_216e0145339683f55e0419fa6618820d" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>1-Bedroom in South Beach</h4>                     <p><strong>Price:</strong> $2,363.13</p>                     <p><strong>Size:</strong> 595 sq ft</p>                     <p><strong>Features:</strong> Walk-in Closet, Security System, Heating</p>                     <p><strong>Available:</strong> February 2024</p>                 </div>                 </div>`)[0];
+                popup_ea4f08cf3be94af67eb0abdfb972addd.setContent(html_216e0145339683f55e0419fa6618820d);
+            
+        
+
+        marker_3231d317eea2d6d1f8e6253f8c004408.bindPopup(popup_ea4f08cf3be94af67eb0abdfb972addd)
+        ;
+
+        
+    
+    
+            var marker_ad71675c0020fac17743208441a7d59b = L.marker(
+                [25.8049, -80.1989],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_ef7ea2d02b1b3f744f48b71399b062bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad71675c0020fac17743208441a7d59b.setIcon(icon_ef7ea2d02b1b3f744f48b71399b062bd);
+        
+    
+        var popup_78b35c2ad67fc1250e62a286576e74c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_55615916139a57f6400e81271d9a1061 = $(`<div id="html_55615916139a57f6400e81271d9a1061" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Studio in Wynwood</h4>                     <p><strong>Price:</strong> $1,674.42</p>                     <p><strong>Size:</strong> 447 sq ft</p>                     <p><strong>Features:</strong> Pool, Furnished, Heating</p>                     <p><strong>Available:</strong> August 2024</p>                 </div>                 </div>`)[0];
+                popup_78b35c2ad67fc1250e62a286576e74c8.setContent(html_55615916139a57f6400e81271d9a1061);
+            
+        
+
+        marker_ad71675c0020fac17743208441a7d59b.bindPopup(popup_78b35c2ad67fc1250e62a286576e74c8)
+        ;
+
+        
+    
+    
+            var marker_2f2e00e736a1e2025cbdc72850c86e8e = L.marker(
+                [25.8049, -80.1989],
+                {}
+            ).addTo(map_6249ebce10d07d6cff2e8aeb049ac425);
+        
+    
+            var icon_3b87d0066066c377aa365a3b49e98973 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f2e00e736a1e2025cbdc72850c86e8e.setIcon(icon_3b87d0066066c377aa365a3b49e98973);
+        
+    
+        var popup_d0b22d7c0c7568110b14b2dc5c423fdf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0c0676aac53beb3161a56dc9f77e9e62 = $(`<div id="html_0c0676aac53beb3161a56dc9f77e9e62" style="width: 100.0%; height: 100.0%;">                 <div style="width: 250px">                     <h4>Shared Room in Wynwood</h4>                     <p><strong>Price:</strong> $952.13</p>                     <p><strong>Size:</strong> 235 sq ft</p>                     <p><strong>Features:</strong> Walk-in Closet, Air Conditioning, Furnished</p>                     <p><strong>Available:</strong> May 2024</p>                 </div>                 </div>`)[0];
+                popup_d0b22d7c0c7568110b14b2dc5c423fdf.setContent(html_0c0676aac53beb3161a56dc9f77e9e62);
+            
+        
+
+        marker_2f2e00e736a1e2025cbdc72850c86e8e.bindPopup(popup_d0b22d7c0c7568110b14b2dc5c423fdf)
+        ;
+
+        
+    
+</script>
+</html>

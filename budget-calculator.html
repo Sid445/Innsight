@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Innsight Budget Calculator - Plan your accommodation expenses">
+    <meta name="theme-color" content="#2563eb">
+    <title>Budget Calculator | Innsight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Budget Calculator Specific Styles */
+        .page-header {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .budget-calculator {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 1rem;
+            color: #666;
+        }
+
+        .input-with-icon input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 3rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-calculate {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn-calculate:hover {
+            background: #1d4ed8;
+        }
+
+        .result-section {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .budget-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto;
+            transition: transform 0.3s ease;
+        }
+
+        .budget-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .budget-breakdown {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .breakdown-item:hover {
+            transform: translateX(5px);
+        }
+
+        .financial-tips {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card i {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .calculator-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reuse your existing navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-brand">
+            <a href="index.html" aria-label="Innsight Home">Innsight</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="budget-calculator.html" class="active">Budget Calculator</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Student Budget Calculator</h1>
+        <p>Plan your accommodation expenses and manage your finances effectively</p>
+    </header>
+
+    <main class="container">
+        <div class="budget-calculator">
+            <div class="calculator-container">
+                <div class="input-section">
+                    <div class="form-group">
+                        <label for="rent">Monthly Rent</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-home"></i>
+                            <input type="number" id="rent" placeholder="Enter rent amount" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="food">Food Expenses</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-utensils"></i>
+                            <input type="number" id="food" placeholder="Estimated food cost" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="utilities">Utilities</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-bolt"></i>
+                            <input type="number" id="utilities" placeholder="Water, electricity, etc." min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transport">Transportation</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-bus"></i>
+                            <input type="number" id="transport" placeholder="Travel expenses" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="internet">Internet & Phone</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-wifi"></i>
+                            <input type="number" id="internet" placeholder="Internet and phone bills" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other">Other Expenses</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-plus-circle"></i>
+                            <input type="number" id="other" placeholder="Additional expenses" min="0">
+                        </div>
+                    </div>
+
+                    <button id="calculateBtn" class="btn-calculate">
+                        <i class="fas fa-calculator"></i> Calculate Budget
+                    </button>
+                </div>
+
+                <div class="result-section" id="budgetResult">
+                    <div class="total-budget">
+                        <h3>Monthly Budget Summary</h3>
+                        <div class="budget-circle">
+                            <span id="totalAmount">₹0</span>
+                            <span class="label">Total</span>
+                        </div>
+                    </div>
+                    <div class="budget-breakdown">
+                        <div class="breakdown-item">
+                            <span class="label">Recommended Savings (10%)</span>
+                            <span id="savingsAmount">₹0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="label">Daily Budget</span>
+                            <span id="dailyBudget">₹0</span>
+                        </div>
+                    </div>
+                    <div id="budgetChart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="financial-tips">
+            <h2>Smart Budgeting Tips for Students</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Save on Food</h3>
+                    <p>Cook meals at home and plan your grocery shopping. Consider meal prep to save both time and money.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-bus"></i>
+                    <h3>Transportation Savings</h3>
+                    <p>Use student bus passes and consider walking or cycling for short distances.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Utility Management</h3>
+                    <p>Save on utilities by being mindful of energy usage and using energy-efficient appliances.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reuse your existing footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Innsight. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="budget-calculator.js"></script>
+</body>
+</html>

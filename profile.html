@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <div class="profile-wrapper">
+        <section class="profile-header">
+          <div class="profile-avatar">
+            <input type="file" id="avatarUpload" accept="image/*">
+            <i class="fas fa-user-circle"></i>
+            <div class="upload-overlay">Change Photo</div>
+          </div>
+          <div class="profile-info">
+            <h1>My Profile</h1>
+            <p class="profile-status">Verified Member since January 2025</p>
+          </div>
+        </section>
+
+        <div class="profile-stats">
+          <div class="stat-card">
+            <h3>12</h3>
+            <p>Favorites</p>
+          </div>
+          <div class="stat-card">
+            <h3>5</h3>
+            <p>Recent Views</p>
+          </div>
+          <div class="stat-card">
+            <h3>3</h3>
+            <p>Bookings</p>
+          </div>
+          <div class="stat-card">
+            <h3>8</h3>
+            <p>Reviews</p>
+          </div>
+        </div>
+
+        <div class="profile-sections">
+          <section class="profile-form">
+            <h2>Personal Information</h2>
+            <form id="profileForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" value="Ramesh" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="Ramesh@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" value="6309087690">
+              </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter your address">siddipet,telangana</textarea>
+              </div>
+              <div class="form-group">
+                <label for="bio">About Me</label>
+                <textarea id="bio" name="bio" placeholder="Tell us about yourself">I'm a frequent traveler who loves exploring new places and meeting new people.</textarea>
+              </div>
+              <div class="form-group">
+                <label for="preferences">Accommodation Preferences</label>
+                <select id="preferences" name="preferences" multiple>
+                  <option value="hostel" selected>Hostel</option>
+                  <option value="single-room" selected>Single Room</option>
+                  <option value="shared-room">Shared Room</option>
+                  <option value="furnished" selected>Furnished</option>
+                  <option value="ac" selected>Air Conditioned</option>
+                  <option value="wifi">WiFi</option>
+                  <option value="kitchen">Kitchen Access</option>
+                  <option value="parking">Parking</option>
+                </select>
+              </div>
+            </form>
+          </section>
+
+          <div class="profile-sidebar">
+            <section class="profile-activity">
+              <h2>Recent Activity</h2>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <i class="fas fa-search"></i>
+                  <div class="activity-details">
+                    <p>Searched for hostels in Hyderabad</p>
+                    <small>2 days ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <i class="fas fa-heart"></i>
+                  <div class="activity-details">
+                    <p>Added Paradise Hostel to favorites</p>
+                    <small>5 days ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <i class="fas fa-star"></i>
+                  <div class="activity-details">
+                    <p>Reviewed Sunset View Apartments</p>
+                    <small>1 week ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <i class="fas fa-building"></i>
+                  <div class="activity-details">
+                    <p>Booked Green Valley Hostel</p>
+                    <small>2 weeks ago</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+</body>
+</html>

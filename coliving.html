@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+  <script src="main.js" defer></script>
+  <script src="reviews.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <div class="property-details-wrapper">
+        <!-- Image Gallery -->
+        <div class="property-gallery">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/613750746.jpg?k=aa4452943fa4cde50d762708e43dee4087c2bb702d1a2de791439623946569c0&o=" alt="Property Main Image" class="main-image">
+          <div class="thumbnail-grid">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/613750749.jpg?k=05e98eceeb6a8b74715aa91a0007d5419e914da49c2aa6916c226f8f786a800d&o=&hp=1" alt="Room 1">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/613750772.jpg?k=332fc4dfea558991aba8980fbf092e18e3f0838121afb9914c2f6a1bbef01254&o=&hp=1" alt="Room 2">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/613750778.jpg?k=420851c58647e66c750fe5700d739ec87ac27bf7a9fd2c83e84648a8beab3e0b&o=&hp=1" alt="Bathroom">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/613750762.jpg?k=27808da5b1f758e9c85e568f6093fd9b26fd32f0d53e02220bad33574d1a91a8&o=&hp=1" alt="Kitchen">
+          </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="property-info">
+          <div class="property-header">
+            <h1>Olive-2 Coliving PG</h1>
+            <button class="favorite-btn">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Madhapur, Hyderabad</p>
+          <div class="price-rating">
+            <h2 class="price">₹10,000/month</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <span>4.7 (50 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info">
+          <div class="info-item">
+            <i class="fas fa-bed"></i>
+            <span>Single/Shared</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <span>Co-ed</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar"></i>
+            <span>Available Now</span>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <section class="amenities-section">
+          <h2>Amenities</h2>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <i class="fas fa-wifi"></i>
+              <span>WiFi</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-snowflake"></i>
+              <span>AC</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-utensils"></i>
+              <span>Food Available</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-tshirt"></i>
+              <span>Laundry</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-couch"></i>
+              <span>Furnished</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-video"></i>
+              <span>CCTV</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Description -->
+        <section class="description-section">
+          <h2>Description</h2>
+          <p>Modern coliving PG in the bustling area of Madhapur. Olive-2 Coliving PG offers a vibrant community with all the comforts and conveniences for a shared living experience. Perfect for students and professionals looking for a hassle-free stay.</p>
+          <ul class="highlights">
+            <li>High-speed WiFi connection</li>
+            <li>Regular cleaning service</li>
+            <li>Power backup</li>
+            <li>24/7 security with CCTV surveillance</li>
+            <li>Convenient access to public transport</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+          <h2>Contact Owner</h2>
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-group">
+              <input type="hidden" name="access_key" value="88838389-b786-42ec-942b-07a9fd734d22">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="I'm interested in this property..." name="customer details"></textarea>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@olive2colivingpg.com</p>
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1135163432095!2d78.39409647547478!3d17.45428008344435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb912e9da2f425%3A0x5bf67f633f26178e!2sNest%20Olive%20Co-Living%20PG!5e0!3m2!1sen!2sin!4v1737083764541!5m2!1sen!2sin" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="address">Madhapur, Hyderabad, Telangana 500033</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code remains the same as in the previous example
+  </script>
+</body>
+</html>

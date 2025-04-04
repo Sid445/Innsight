@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Properties | Innsight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html">Innsight</a>
+        </div>
+        <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu">
+            <a href="user_dashboard.html">Dashboard</a>
+            <a href="profile.html">Profile</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="index.html" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="comparison-container">
+            <h2>Compare Properties</h2>
+            
+            <div class="property-selector">
+                <div class="selector">
+                    <select id="property1" onchange="updateComparison()">
+                        <option value="">Select Property 1</option>
+                        <option value="1">Sri Sai Boys Hostel</option>
+                        <option value="2">Green Girls Hostel</option>
+                        <option value="3">Luxury Single Room</option>
+                    </select>
+                </div>
+                <div class="selector">
+                    <select id="property2" onchange="updateComparison()">
+                        <option value="">Select Property 2</option>
+                        <option value="1">Sri Sai Boys Hostel</option>
+                        <option value="2">Green Girls Hostel</option>
+                        <option value="3">Luxury Single Room</option>
+                    </select>
+                </div>
+                <div class="selector">
+                    <select id="property3" onchange="updateComparison()">
+                        <option value="">Select Property 3</option>
+                        <option value="1">Sri Sai Boys Hostel</option>
+                        <option value="2">Green Girls Hostel</option>
+                        <option value="3">Luxury Single Room</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Property 1</th>
+                            <th>Property 2</th>
+                            <th>Property 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="image-row">
+                            <td>Image</td>
+                            <td><img src="" alt="" class="comparison-img"></td>
+                            <td><img src="" alt="" class="comparison-img"></td>
+                            <td><img src="" alt="" class="comparison-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td class="price1">-</td>
+                            <td class="price2">-</td>
+                            <td class="price3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td class="location1">-</td>
+                            <td class="location2">-</td>
+                            <td class="location3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Room Type</td>
+                            <td class="type1">-</td>
+                            <td class="type2">-</td>
+                            <td class="type3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Availability</td>
+                            <td class="availability1">-</td>
+                            <td class="availability2">-</td>
+                            <td class="availability3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Rating</td>
+                            <td class="rating1">-</td>
+                            <td class="rating2">-</td>
+                            <td class="rating3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Amenities</td>
+                            <td class="amenities1">-</td>
+                            <td class="amenities2">-</td>
+                            <td class="amenities3">-</td>
+                        </tr>
+                        <tr>
+                            <td>Distance to Landmarks</td>
+                            <td class="distance1">-</td>
+                            <td class="distance2">-</td>
+                            <td class="distance3">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sample property data
+        const propertyData = {
+            "1": {
+                name: "Sri Sai Boys Hostel",
+                image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                price: "₹7,500/month",
+                location: "Ameerpet, Hyderabad",
+                type: "Boys Hostel",
+                availability: "Available Now",
+                rating: "4.5/5",
+                amenities: "WiFi, AC, Laundry, Food",
+                distance: "2km to Metro, 1km to IT Park"
+            },
+            "2": {
+                name: "Green Girls Hostel",
+                image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                price: "₹8,000/month",
+                location: "Madhapur, Hyderabad",
+                type: "Girls Hostel",
+                availability: "From June 1st",
+                rating: "4.3/5",
+                amenities: "WiFi, AC, Gym, Food",
+                distance: "1km to Metro, 0.5km to IT Park"
+            },
+            "3": {
+                name: "Luxury Single Room",
+                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                price: "₹12,000/month",
+                location: "Gachibowli, Hyderabad",
+                type: "Single Room",
+                availability: "Available Now",
+                rating: "4.8/5",
+                amenities: "WiFi, AC, Attached Bathroom, Balcony",
+                distance: "0.5km to Metro, 2km to IT Park"
+            }
+        };
+
+        function updateComparison() {
+            for (let i = 1; i <= 3; i++) {
+                const propertySelect = document.getElementById(`property${i}`);
+                const propertyId = propertySelect.value;
+                
+                if (propertyId) {
+                    const property = propertyData[propertyId];
+                    document.querySelector(`.comparison-img:nth-child(${i})`).src = property.image;
+                    document.querySelector(`.price${i}`).textContent = property.price;
+                    document.querySelector(`.location${i}`).textContent = property.location;
+                    document.querySelector(`.type${i}`).textContent = property.type;
+                    document.querySelector(`.availability${i}`).textContent = property.availability;
+                    document.querySelector(`.rating${i}`).textContent = property.rating;
+                    document.querySelector(`.amenities${i}`).textContent = property.amenities;
+                    document.querySelector(`.distance${i}`).textContent = property.distance;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

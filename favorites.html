@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="favorites.html" class="active">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <h1>My Favorites</h1>
+      
+      <div class="favorites-wrapper">
+        <div class="filters">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchFilter" placeholder="Search your favorites...">
+          </div>
+          <div class="filter-group">
+            <select id="typeFilter">
+              <option value="all">All Types</option>
+              <option value="hostel">Hostels</option>
+              <option value="room">Rooms</option>
+            </select>
+            <select id="sortFilter">
+              <option value="recent">Most Recent</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </div>
+        <div class="favoritesContainer" id="search-results">
+          <!-- Property cards will be dynamically inserted here -->
+          <div id="noFavoritesMessage" style="text-align: center;  display: none;">
+            <h2>No Favorites</h2>
+          </div> 
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to load favorites from localStorage
+    function loadFavorites() {
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      const favoritesWrapper = document.querySelector('.favorites-wrapper');
+      
+      if (favorites.length === 0) {
+        favoritesWrapper.innerHTML = '<h2 style="text-align: center;">No Favorites</h2>';
+        return;
+      }
+
+      // Create container for property cards if favorites exist
+      const propertyGrid = document.createElement('div');
+      propertyGrid.className = 'search-results';
+      
+      favorites.forEach(property => {
+        const propertyCard = createPropertyCard(property);
+        propertyGrid.appendChild(propertyCard);
+      });
+
+      // Replace existing content with filters and property grid
+      favoritesWrapper.innerHTML = `
+        <div class="filters">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchFilter" placeholder="Search your favorites...">
+          </div>
+          <div class="filter-group">
+            <select id="typeFilter">
+              <option value="all">All Types</option>
+              <option value="hostel">Hostels</option>
+              <option value="room">Rooms</option>
+            </select>
+            <select id="sortFilter">
+              <option value="recent">Most Recent</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </div>
+      `;
+      favoritesWrapper.appendChild(propertyGrid);
+      
+      // Add event listeners for filters
+      setupFilters();
+    }
+
+    // Function to create property card
+    function createPropertyCard(property) {
+      const card = document.createElement('div');
+      card.className = 'property-card';
+      card.innerHTML = `
+        <img src="${property.image}" alt="${property.name}">
+        <div class="property-info">
+          <h3>${property.name}</h3>
+          <p class="location">${property.location}</p>
+          <p class="price">${property.price}</p>
+          <div class="rating-info">
+            <span class="stars">${property.stars}</span>
+            <span class="rating-text">${property.rating}</span>
+          </div>
+          <div class="property-features">
+            ${property.features}
+          </div>
+          <div class="card-actions">
+            <a href="${property.detailsLink}" class="btn-primary">View Details</a>
+            <button class="btn-secondary favorite-btn" onclick="removeFavorite('${property.id}')">
+              <i class="fas fa-heart text-danger"></i>
+            </button>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    // Function to remove from favorites
+    function removeFavorite(propertyId) {
+      let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      favorites = favorites.filter(property => property.id !== propertyId);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      loadFavorites(); // Reload the display
+    }
+
+    // Function to setup filters
+    function setupFilters() {
+      // Search filter
+      document.getElementById('searchFilter').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.property-card');
+        
+        cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const location = card.querySelector('.location').textContent.toLowerCase();
+          card.style.display = 
+            title.includes(searchTerm) || location.includes(searchTerm) ? 'block' : 'none';
+        });
+      });
+
+      // Type filter
+      document.getElementById('typeFilter').addEventListener('change', function(e) {
+        const filterValue = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.property-card');
+        
+        cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          if (filterValue === 'all' || title.includes(filterValue)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+
+      // Sort filter
+      document.getElementById('sortFilter').addEventListener('change', function(e) {
+        const sortValue = e.target.value;
+        const container = document.querySelector('.search-results');
+        const cards = Array.from(container.getElementsByClassName('property-card'));
+
+        cards.sort((a, b) => {
+          const priceA = parseInt(a.querySelector('.price').textContent.replace(/[^\d]/g, ''));
+          const priceB = parseInt(b.querySelector('.price').textContent.replace(/[^\d]/g, ''));
+          
+          switch(sortValue) {
+            case 'price-low':
+              return priceA - priceB;
+            case 'price-high':
+              return priceB - priceA;
+            case 'rating':
+              const ratingA = parseFloat(a.querySelector('.rating-text').textContent);
+              const ratingB = parseFloat(b.querySelector('.rating-text').textContent);
+              return ratingB - ratingA;
+            default:
+              return 0;
+          }
+        });
+
+        cards.forEach(card => container.appendChild(card));
+      });
+    }
+
+    // Load favorites when page loads
+    document.addEventListener('DOMContentLoaded', loadFavorites);
+  </script>
+</body>
+</html>

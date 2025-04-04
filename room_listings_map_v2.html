@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_518c6e3825c7ef67d12885184bbfc1a0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_518c6e3825c7ef67d12885184bbfc1a0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_518c6e3825c7ef67d12885184bbfc1a0 = L.map(
+                "map_518c6e3825c7ef67d12885184bbfc1a0",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_682f204b64e989b04b04ef133c7ade1b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_682f204b64e989b04b04ef133c7ade1b.addTo(map_518c6e3825c7ef67d12885184bbfc1a0);
+        
+    
+            var marker_c5ffd55643342ead7a2e424cf5199e53 = L.marker(
+                [40.7128, -74.006],
+                {}
+            ).addTo(map_518c6e3825c7ef67d12885184bbfc1a0);
+        
+    
+            var icon_c5321e1c1a9c64fafd0ab969dd810acd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c5ffd55643342ead7a2e424cf5199e53.setIcon(icon_c5321e1c1a9c64fafd0ab969dd810acd);
+        
+    
+        var popup_646c65e6294ee91d1fb8eab0706d8164 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1a88fddc331599625ce22b6e2a8087e6 = $(`<div id="html_1a88fddc331599625ce22b6e2a8087e6" style="width: 100.0%; height: 100.0%;"><h3>New York Listings</h3>             <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Private Room</strong> in Queens<br>                 Price: $1,232.06<br>                 Size: 215 sq ft<br>                 Features: Furnished, Balcony, High-Speed Internet<br>                 Available: July 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>1-Bedroom</strong> in Brooklyn<br>                 Price: $2,128.07<br>                 Size: 628 sq ft<br>                 Features: Heating, Hardwood Floors, Security System<br>                 Available: February 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Studio</strong> in Bronx<br>                 Price: $1,905.60<br>                 Size: 422 sq ft<br>                 Features: Balcony, Hardwood Floors, Walk-in Closet<br>                 Available: November 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in Manhattan<br>                 Price: $1,006.91<br>                 Size: 251 sq ft<br>                 Features: Balcony, Hardwood Floors, Walk-in Closet<br>                 Available: February 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in Bronx<br>                 Price: $1,307.10<br>                 Size: 211 sq ft<br>                 Features: Walk-in Closet, Cable TV, Furnished<br>                 Available: July 2024             </div>             </div>`)[0];
+                popup_646c65e6294ee91d1fb8eab0706d8164.setContent(html_1a88fddc331599625ce22b6e2a8087e6);
+            
+        
+
+        marker_c5ffd55643342ead7a2e424cf5199e53.bindPopup(popup_646c65e6294ee91d1fb8eab0706d8164)
+        ;
+
+        
+    
+    
+            var marker_5f568ac590e53fbcc3e4b916936c6332 = L.marker(
+                [34.0522, -118.2437],
+                {}
+            ).addTo(map_518c6e3825c7ef67d12885184bbfc1a0);
+        
+    
+            var icon_953b59cce59ff999644cc7fc704ac74d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5f568ac590e53fbcc3e4b916936c6332.setIcon(icon_953b59cce59ff999644cc7fc704ac74d);
+        
+    
+        var popup_e4a0278b416615766e14c602399527a6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bcec640d7682ff2f452350c289059dd = $(`<div id="html_2bcec640d7682ff2f452350c289059dd" style="width: 100.0%; height: 100.0%;"><h3>Los Angeles Listings</h3>             <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in Downtown<br>                 Price: $1,098.22<br>                 Size: 204 sq ft<br>                 Features: Security System, Walk-in Closet, Gym<br>                 Available: March 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>2-Bedroom</strong> in Pasadena<br>                 Price: $2,547.96<br>                 Size: 750 sq ft<br>                 Features: Parking, Gym, Pet Friendly<br>                 Available: August 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Private Room</strong> in Hollywood<br>                 Price: $1,416.04<br>                 Size: 160 sq ft<br>                 Features: Security System, Pool, Parking<br>                 Available: March 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Private Room</strong> in Pasadena<br>                 Price: $1,430.07<br>                 Size: 150 sq ft<br>                 Features: Walk-in Closet, Gym, Furnished<br>                 Available: June 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in Pasadena<br>                 Price: $977.99<br>                 Size: 289 sq ft<br>                 Features: Furnished, High-Speed Internet, Balcony<br>                 Available: December 2024             </div>             </div>`)[0];
+                popup_e4a0278b416615766e14c602399527a6.setContent(html_2bcec640d7682ff2f452350c289059dd);
+            
+        
+
+        marker_5f568ac590e53fbcc3e4b916936c6332.bindPopup(popup_e4a0278b416615766e14c602399527a6)
+        ;
+
+        
+    
+    
+            var marker_2c79275ccef5ed46ee6c58546dfbf4fd = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(map_518c6e3825c7ef67d12885184bbfc1a0);
+        
+    
+            var icon_8226007ec9efe9bd429958adfe7fe72f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2c79275ccef5ed46ee6c58546dfbf4fd.setIcon(icon_8226007ec9efe9bd429958adfe7fe72f);
+        
+    
+        var popup_e9085a35f6c98779810ee44f1281b541 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1742d3806dfbc8a87e18d70102f56209 = $(`<div id="html_1742d3806dfbc8a87e18d70102f56209" style="width: 100.0%; height: 100.0%;"><h3>Chicago Listings</h3>             <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>2-Bedroom</strong> in River North<br>                 Price: $2,781.94<br>                 Size: 769 sq ft<br>                 Features: Dishwasher, Washer/Dryer, Air Conditioning<br>                 Available: June 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Studio</strong> in River North<br>                 Price: $1,475.04<br>                 Size: 441 sq ft<br>                 Features: Security System, Walk-in Closet, Cable TV<br>                 Available: December 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Studio</strong> in Lake View<br>                 Price: $1,619.72<br>                 Size: 479 sq ft<br>                 Features: High-Speed Internet, Gym, Hardwood Floors<br>                 Available: July 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Studio</strong> in Wicker Park<br>                 Price: $1,648.69<br>                 Size: 554 sq ft<br>                 Features: Heating, Security System, Pool<br>                 Available: August 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>2-Bedroom</strong> in Wicker Park<br>                 Price: $2,608.67<br>                 Size: 707 sq ft<br>                 Features: Dishwasher, Parking, Balcony<br>                 Available: November 2024             </div>             </div>`)[0];
+                popup_e9085a35f6c98779810ee44f1281b541.setContent(html_1742d3806dfbc8a87e18d70102f56209);
+            
+        
+
+        marker_2c79275ccef5ed46ee6c58546dfbf4fd.bindPopup(popup_e9085a35f6c98779810ee44f1281b541)
+        ;
+
+        
+    
+    
+            var marker_9e7abca2cfb3582e911212c8b78fff71 = L.marker(
+                [25.7617, -80.1918],
+                {}
+            ).addTo(map_518c6e3825c7ef67d12885184bbfc1a0);
+        
+    
+            var icon_f94ffa17353457217418eb480d3df57e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_9e7abca2cfb3582e911212c8b78fff71.setIcon(icon_f94ffa17353457217418eb480d3df57e);
+        
+    
+        var popup_73b41654039ce021ec3f9fed5e3b89b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6ec6116c62c27724d19ab9e56d3ad53b = $(`<div id="html_6ec6116c62c27724d19ab9e56d3ad53b" style="width: 100.0%; height: 100.0%;"><h3>Miami Listings</h3>             <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in Wynwood<br>                 Price: $1,060.73<br>                 Size: 244 sq ft<br>                 Features: Cable TV, Balcony, Pool<br>                 Available: April 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Private Room</strong> in Coral Gables<br>                 Price: $1,150.17<br>                 Size: 208 sq ft<br>                 Features: Security System, Furnished, Pet Friendly<br>                 Available: July 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>Shared Room</strong> in South Beach<br>                 Price: $894.05<br>                 Size: 240 sq ft<br>                 Features: Cable TV, Hardwood Floors, Parking<br>                 Available: April 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>2-Bedroom</strong> in Coral Gables<br>                 Price: $3,235.38<br>                 Size: 867 sq ft<br>                 Features: Pet Friendly, Pool, Furnished<br>                 Available: July 2024             </div>                          <div style='margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;'>                 <strong>1-Bedroom</strong> in Downtown Miami<br>                 Price: $2,279.97<br>                 Size: 554 sq ft<br>                 Features: Heating, Pet Friendly, Parking<br>                 Available: May 2024             </div>             </div>`)[0];
+                popup_73b41654039ce021ec3f9fed5e3b89b4.setContent(html_6ec6116c62c27724d19ab9e56d3ad53b);
+            
+        
+
+        marker_9e7abca2cfb3582e911212c8b78fff71.bindPopup(popup_73b41654039ce021ec3f9fed5e3b89b4)
+        ;
+
+        
+    
+</script>
+</html>

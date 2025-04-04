@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+  <script src="main.js" defer></script>
+  <script src="reviews.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <div class="property-details-wrapper">
+        <!-- Image Gallery -->
+        <div class="property-gallery">
+          <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Fe_improve%2Fe_sharpen%3A10%2Fe_saturation%3A10%2Ff_auto%2Cq_auto%2Fv1638172331%2FWebsite%2FCMS-Uploads%2Fibusvpo2ogwxkvsj9jpv.jpg&w=1920&q=75" alt="Property Main Image" class="main-image">
+          <div class="thumbnail-grid">
+            <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Fe_improve%2Fe_sharpen%3A10%2Fe_saturation%3A10%2Ff_auto%2Cq_auto%2Fv1638172338%2FWebsite%2FCMS-Uploads%2Ffnrfvxmulfzj0rdqctqe.jpg&w=1920&q=75" alt="Room 1">
+            <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Fe_improve%2Fe_sharpen%3A10%2Fe_saturation%3A10%2Ff_auto%2Cq_auto%2Fv1638172351%2FWebsite%2FCMS-Uploads%2Fw1iqbsktubynakniarrz.jpg&w=1920&q=75" alt="Room 2">
+            <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Fe_improve%2Fe_sharpen%3A10%2Fe_saturation%3A10%2Ff_auto%2Cq_auto%2Fv1638172358%2FWebsite%2FCMS-Uploads%2Fclwml2ryzp8t7etcj10m.jpg&w=1920&q=75" alt="Bathroom">
+            <img src="https://www.stanzaliving.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fstanza-living%2Fimage%2Fupload%2Ff_auto%2Cq_auto%2Fe_improve%2Fe_sharpen%3A10%2Fe_saturation%3A10%2Ff_auto%2Cq_auto%2Fv1638172377%2FWebsite%2FCMS-Uploads%2Ftcwqgakf7heabgwydiav.jpg&w=1920&q=75" alt="Kitchen">
+          </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="property-info">
+          <div class="property-header">
+            <h1>Syracuse House</h1>
+            <button class="favorite-btn">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Gandimaisamma, Hyderabad</p>
+          <div class="price-rating">
+            <h2 class="price">₹8,000/month</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <span>4.5 (35 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info">
+          <div class="info-item">
+            <i class="fas fa-bed"></i>
+            <span>Single/Shared</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <span>Boys Only</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar"></i>
+            <span>Available Now</span>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <section class="amenities-section">
+          <h2>Amenities</h2>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <i class="fas fa-wifi"></i>
+              <span>WiFi</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-snowflake"></i>
+              <span>AC</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-utensils"></i>
+              <span>Food Available</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-tshirt"></i>
+              <span>Laundry</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-couch"></i>
+              <span>Furnished</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-video"></i>
+              <span>CCTV</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Description -->
+        <section class="description-section">
+          <h2>Description</h2>
+          <p>Well-maintained  hostel in the serene area of Gandimaisamma. We provide a safe and comfortable living environment with all essential amenities for students and working professionals. Conveniently located near educational institutions and shopping centers.</p>
+          <ul class="highlights">
+            <li>24/7 security with CCTV surveillance</li>
+            <li>High-speed WiFi connection</li>
+            <li>Regular cleaning service</li>
+            <li>Power backup</li>
+            <li>Close to public transportation</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+          <h2>Contact Owner</h2>
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-group">
+              <input type="hidden" name="access_key" value="88838389-b786-42ec-942b-07a9fd734d22">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="I'm interested in this property..." name="customer details"></textarea>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@Syracuse.com</p>
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.61202728042!2d78.42149387547732!3d17.57364888334569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fb9df46061d%3A0x7c96ba7c62c7f97e!2sStanza%20Living%20%7C%20Syracuse%20House!5e0!3m2!1sen!2sin!4v1737082357879!5m2!1sen!2sin" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="address">Gandimaisamma, Hyderabad, Telangana 500036</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code remains the same as in the previous example
+  </script>
+</body>
+</html>

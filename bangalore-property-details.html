@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+  <script src="main.js" defer></script>
+  <script src="reviews.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <div class="property-details-wrapper">
+        <!-- Image Gallery -->
+        <div class="property-gallery">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Property Main Image" class="main-image">
+          <div class="thumbnail-grid">
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Room 1">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Room 2">
+            <img src="https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bathroom">
+            <img src="https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitchen">
+          </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="property-info">
+          <div class="property-header">
+            <h1>Koramangala Boys Hostel</h1>
+            <button class="favorite-btn">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Koramangala 5th Block, Bangalore</p>
+          <div class="price-rating">
+            <h2 class="price">₹8,500/month</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <span>4.5 (32 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info">
+          <div class="info-item">
+            <i class="fas fa-bed"></i>
+            <span>Single/Shared</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <span>Boys Only</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar"></i>
+            <span>Available Now</span>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <section class="amenities-section">
+          <h2>Amenities</h2>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <i class="fas fa-wifi"></i>
+              <span>High-Speed WiFi</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-snowflake"></i>
+              <span>AC Rooms</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-utensils"></i>
+              <span>3 Times Meals</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-tshirt"></i>
+              <span>Laundry Service</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-couch"></i>
+              <span>Common Area</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-broom"></i>
+              <span>Room Cleaning</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>24/7 Security</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-parking"></i>
+              <span>Bike Parking</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Description -->
+        <section class="description-section">
+          <h2>About this Property</h2>
+          <p>Located in the heart of Koramangala, one of Bangalore's most vibrant neighborhoods, our hostel offers comfortable accommodation for students and working professionals. We're just minutes away from major tech parks and popular hangout spots.</p>
+          <div class="highlights">
+            <h3>Property Highlights:</h3>
+            <ul>
+              <li>Walking distance to tech parks and startups</li>
+              <li>Close to popular restaurants and cafes</li>
+              <li>Well-connected by public transport</li>
+              <li>24/7 power backup</li>
+              <li>Professional housekeeping services</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Location -->
+        <section class="location-section">
+          <h2>Location</h2>
+          <div class="location-details">
+            <div class="distance-info">
+              <div class="distance-item">
+                <i class="fas fa-building"></i>
+                <p>0.5 km to Koramangala Forum Mall</p>
+              </div>
+              <div class="distance-item">
+                <i class="fas fa-bus"></i>
+                <p>2 min walk to bus stop</p>
+              </div>
+              <div class="distance-item">
+                <i class="fas fa-utensils"></i>
+                <p>Multiple restaurants within 500m</p>
+              </div>
+            </div>
+            <div id="map" class="location-map">
+              <!-- Map will be loaded here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews-section">
+          <h2>Reviews</h2>
+          <div class="reviews-summary">
+            <div class="overall-rating">
+              <h3>4.5</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p>32 reviews</p>
+            </div>
+            <div class="rating-breakdown">
+              <div class="rating-bar">
+                <span>Cleanliness</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 90%"></div>
+                </div>
+                <span>4.5</span>
+              </div>
+              <div class="rating-bar">
+                <span>Location</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 95%"></div>
+                </div>
+                <span>4.8</span>
+              </div>
+              <div class="rating-bar">
+                <span>Food Quality</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 85%"></div>
+                </div>
+                <span>4.2</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+          <h2>Contact</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>+91 9876543210</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>koramangala@innsight.com</p>
+            </div>
+          </div>
+          <button class="btn-primary book-now-btn">Book Now</button>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Parse URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const hostelId = urlParams.get('id');
+    const hostelName = urlParams.get('name');
+    const hostelPrice = urlParams.get('price');
+    const hostelLocation = urlParams.get('location');
+    const hostelRating = urlParams.get('rating');
+    const hostelReviews = urlParams.get('reviews');
+
+    // Update hostel details
+    document.querySelector('.property-header h1').textContent = hostelName;
+    document.querySelector('.location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${hostelLocation}`;
+    document.querySelector('.price').textContent = `₹${hostelPrice}/month`;
+    document.querySelector('.rating span').textContent = `${hostelRating} (${hostelReviews} reviews)`;
+    document.querySelector('.overall-rating h3').textContent = hostelRating;
+    document.querySelector('.reviews-summary p').textContent = `${hostelReviews} reviews`;
+
+    // Update images based on hostel ID
+    const imageMap = {
+      'koramangala': {
+        main: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        thumbnails: [
+          'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ]
+      },
+      'indiranagar': {
+        main: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        thumbnails: [
+          'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ]
+      },
+      'whitefield': {
+        main: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        thumbnails: [
+          'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ]
+      },
+      'electronic-city': {
+        main: 'https://images.unsplash.com/photo-1630699144867-37acec97df5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+        thumbnails: [
+          'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        ]
+      }
+    };
+
+    // Update images if we have them for this hostel
+    if (imageMap[hostelId]) {
+      document.querySelector('.main-image').src = imageMap[hostelId].main;
+      const thumbnails = document.querySelectorAll('.thumbnail-grid img');
+      imageMap[hostelId].thumbnails.forEach((src, index) => {
+        if (thumbnails[index]) thumbnails[index].src = src;
+      });
+    }
+
+    // Update location details based on hostel ID
+    const locationDetails = {
+      'koramangala': {
+        landmarks: [
+          { icon: 'building', text: '0.5 km to Koramangala Forum Mall' },
+          { icon: 'bus', text: '2 min walk to bus stop' },
+          { icon: 'utensils', text: 'Multiple restaurants within 500m' }
+        ]
+      },
+      'indiranagar': {
+        landmarks: [
+          { icon: 'train', text: '1 km to Indiranagar Metro Station' },
+          { icon: 'shopping-bag', text: '100m to 100 Feet Road' },
+          { icon: 'glass-cheers', text: 'Numerous pubs and cafes nearby' }
+        ]
+      },
+      'whitefield': {
+        landmarks: [
+          { icon: 'building', text: '1 km to Phoenix Marketcity' },
+          { icon: 'briefcase', text: 'Near ITPL Tech Park' },
+          { icon: 'hospital', text: '2 km to Manipal Hospital' }
+        ]
+      },
+      'electronic-city': {
+        landmarks: [
+          { icon: 'industry', text: 'Near Infosys Campus' },
+          { icon: 'bus', text: '5 min to Electronic City Bus Terminal' },
+          { icon: 'shopping-cart', text: 'Close to Electronic City Market' }
+        ]
+      }
+    };
+
+    // Update location landmarks
+    if (locationDetails[hostelId]) {
+      const distanceInfo = document.querySelector('.distance-info');
+      distanceInfo.innerHTML = locationDetails[hostelId].landmarks.map(landmark => `
+        <div class="distance-item">
+          <i class="fas fa-${landmark.icon}"></i>
+          <p>${landmark.text}</p>
+        </div>
+      `).join('');
+    }
+
+    // Handle favorite button
+    document.querySelector('.favorite-btn').addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      icon.classList.toggle('far');
+      icon.classList.toggle('fas');
+    });
+
+    // Handle image gallery
+    const mainImage = document.querySelector('.main-image');
+    const thumbnails = document.querySelectorAll('.thumbnail-grid img');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        mainImage.src = this.src;
+        mainImage.alt = this.alt;
+      });
+    });
+
+    // Handle booking button
+    document.querySelector('.book-now-btn').addEventListener('click', function() {
+      alert('Booking feature coming soon!');
+    });
+  </script>
+</body>
+</html>

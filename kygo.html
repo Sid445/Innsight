@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Details | Innsight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="user.css">
+  <script src="main.js" defer></script>
+  <script src="reviews.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">Innsight</a>
+    </div>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-menu">
+      <a href="user_dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="index.html" class="logout-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="content-container fade-in">
+      <div class="property-details-wrapper">
+        <!-- Image Gallery -->
+        <div class="property-gallery">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/339152597.jpg?k=9c9bd8568f7b49a5664f209547487a32a8e7e01e766f06fa984b9f20293a10f1&o=&hp=1" alt="Property Main Image" class="main-image">
+          <div class="thumbnail-grid">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/337620911.jpg?k=ecf5ef552aad8d3a3be7ca0b87c385566af1950ee0915f550de942ff1ab53381&o=&hp=1" alt="Room 1">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/337621447.jpg?k=5db633c355ad778fde81f7a6eb661d35017235328441d1fbde3af93baac75a44&o=&hp=1" alt="Bathroom">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/337620141.jpg?k=691da30ad9d18040977106f9e9f75a3b0d61ffb294c6ffba8d815884e76a49dd&o=&hp=1" alt="Kitchen">
+          </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="property-info">
+          <div class="property-header">
+            <h1>KyGo Hostels</h1>
+            <button class="favorite-btn">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Jubilee Hills, Hyderabad</p>
+          <div class="price-rating">
+            <h2 class="price">₹9000/month</h2>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <span>4.5 (186 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info">
+          <div class="info-item">
+            <i class="fas fa-bed"></i>
+            <span>Single/Shared</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <span>Mixed</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-calendar"></i>
+            <span>Available Now</span>
+          </div>
+        </div>
+
+        <!-- Amenities -->
+        <section class="amenities-section">
+          <h2>Amenities</h2>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <i class="fas fa-wifi"></i>
+              <span>WiFi</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-snowflake"></i>
+              <span>AC</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-utensils"></i>
+              <span>Food Available</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-tshirt"></i>
+              <span>Laundry</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-couch"></i>
+              <span>Furnished</span>
+            </div>
+            <div class="amenity-item">
+              <i class="fas fa-video"></i>
+              <span>CCTV</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Description -->
+        <section class="description-section">
+          <h2>Description</h2>
+          <p>KyGo Hostels offers a comfortable living experience in the prime location of Jubilee Hills, Hyderabad. Designed for students and young professionals, the hostel provides a lively and secure environment with modern amenities.</p>
+          <ul class="highlights">
+            <li>24/7 security with CCTV surveillance</li>
+            <li>High-speed WiFi connection</li>
+            <li>Regular cleaning service</li>
+            <li>Power backup</li>
+            <li>Close to public transportation</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+          <h2>Contact Owner</h2>
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-group">
+              <input type="hidden" name="access_key" value="88838389-b786-42ec-942b-07a9fd734d22">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="I'm interested in this property..." name="customer details"></textarea>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> info@kygohostels.com</p>
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-section">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.944907067169!2d78.41853027547391!3d17.414431383477368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb974f38301599%3A0x5c271797f5bbcbeb!2sKygo%20Hostels!5e0!3m2!1sen!2sin!4v1737084844651!5m2!1sen!2sin" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="address">456 Jubilee Hills Road, Hyderabad, Telangana 500033</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Innsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code remains the same as in the previous example
+  </script>
+</body>
+</html>

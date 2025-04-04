@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Recommendations | Innsight</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .location-search {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .location-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .location-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .location-card p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html">Innsight</a>
+        </div>
+        <nav class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="map-view.html">Map View</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="user_dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="location-search">
+        <div class="search-container">
+            <input type="text" 
+                   class="search-input" 
+                   id="cityInput" 
+                   placeholder="Enter city name (e.g., Hyderabad, Bangalore)"
+                   onkeypress="if(event.key === 'Enter') searchLocations()">
+            <button class="search-button" onclick="searchLocations()">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <!-- Results will be dynamically added here -->
+        </div>
+    </main>
+
+    <script src="location_recommender.js"></script>
+    <script>
+        function searchLocations() {
+            const cityInput = document.getElementById('cityInput');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const city = cityInput.value.trim();
+
+            if (!city) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>Please enter a city name</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const result = getRandomLocations(city);
+            
+            if (!result.success) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-exclamation-circle fa-2x"></i>
+                        <p>${result.message}</p>
+                    </div>
+                `;
+                return;
+            }
+
+            resultsContainer.innerHTML = result.locations.map(location => `
+                <div class="location-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> ${location}</h3>
+                    <p>Popular area for hostels</p>
+                </div>
+            `).join('');
+        }
+
+        // Show initial alert
+        window.addEventListener('load', () => {
+            showAlert();
+        });
+    </script>
+</body>
+</html>
